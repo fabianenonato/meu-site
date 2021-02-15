@@ -1,0 +1,29 @@
+<div class="wptwa-container left-side" data-delay-time="0" data-inactive-time="0" data-scroll-length="0" data-auto-display-on-mobile="off">
+			<div class="wptwa-box show">
+				<div class="wptwa-wrapper">
+				
+										<span class="wptwa-close"></span>
+					<div class="wptwa-people">
+						
+												
+												
+						<a href="https://web.whatsapp.com/send?phone=5511985802390&amp;text=Olá, gostaria de solicitar um orçamento." target="_blank" class="wptwa-account" data-number="5541992085368" data-auto-text="Olá, gostaria de solicitar um orçamento.">
+							<div class="wptwa-face no-image"><img src="" onerror="this.style.display='none'" style="display: none;"></div>
+							<div class="wptwa-info">
+								
+																<span class="wptwa-title">Web Designer</span>								
+																
+								<span class="wptwa-name">Top Design</span>
+								
+							</div>
+							<div class="wptwa-clearfix"></div>
+						</a>
+						
+												
+					</div>
+				</div>
+			</div>
+			<span class="wptwa-handler">
+				<svg class="WhatsApp" width="15px" height="15px" viewBox="0 0 90 90"><use xlink:href="#wptwa-logo"></use></svg>
+				<span class="text">Whatsapp</span>			</span>
+		</div>
