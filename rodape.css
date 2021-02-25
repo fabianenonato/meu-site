@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900);
+
+/* CONFIGURAÇÕES GERAIS 
+
+Vermelho --> color:#f93337;
+Borda vermelha --> #fd2e34;
+Borda cinza --> border:1px solid #2e2e2e;
+*/
+
+
+
+
+.transition-rodape								{ -moz-transition: all 3s ease; -webkit-transition: all 3s ease; -o-transition: all 3s ease; transition: all 3s ease;}
+.transition-rodape:hover						{ -moz-transition: all 0.300s ease; -webkit-transition: all 0.300s ease; -o-transition: all 0.300s ease;  transition: all 0.300s ease;}
+
+#div-rodape-container { font-family:'Montserrat', sans-serif!important;;display:table;width:100%;margin:0 auto;background:#1b1b21;background-color:#1b1b21; } 
+
+#div-mulher			{ padding:130px 0px!important;background-color:#000000;  background-image:url('https://www.jmleventos.com.br/images/rodape-2020/div-mulher.jpg');background-position:right top;background-repeat:no-repeat;background-size:1500px;background-attachment:scroll;}
+.div-mulher-img-1 { margin:0 auto; }
+
+
+/* NEWSLETTER */
+.max-width-newsletter { max-width:960px;margin:0 auto; }
+#div-newsletter-2020		{ background-color:#d4d4d4; color:#FFFFFF;padding:40px 0px!important;text-align:center; }
+#div-newsletter-2020 .div-titulo { color:#ce2e32;font-weight:800!important;font-size:18px;padding:10px!important; }
+.div-newsletter-2020-button { padding:10px!important;color:#f64b50;border-radius:15px;border:2px solid #f64b50;font-size:11px;background-color:transparent;letter-spacing:1px;width:100%; }
+.div-newsletter-2020-button:hover { color:#ffffff;background-color:#f64b50; }
+.label-9-input { padding:5px!important; }
+.label-9-button { padding:3px!important; }
+
+
+/* DIV rodape  #################################################################################################### */
+.div-rodape-2020		{ background-color:#1b1b21;color:#FFFFFF;width:100%;max-width:1250px;display:table;margin:0 auto; }
+.div-rodape-2020 .div-logos-grupo-jml { height:210px;width:43%;display:inline-block; }
+.div-rodape-2020 .div-rodape-infos-empresa { height:210px;width:33%;display:inline-block;font-size:11px;line-height:17px;border-left:1px solid #2e2e2e!important;border-right:1px solid #2e2e2e; }
+.div-rodape-2020 .div-rodape-infos-empresa-responsivo { display:none; }
+.div-rodape-2020 .div-rodape-central-responsivo { display:none; }
+.div-rodape-2020 .div-logos-grupo-jml-texto { padding-top:75px; display:table;text-align:left; }
+.div-rodape-2020 .div-rodape-infos-empresa-texto { font-size:11px;padding-top:75px;display:table;margin:0 auto;font-weight:300!important; }
+.div-rodape-2020 .div-rodape-central-texto { padding-top:75px;display:table;margin:0 auto; }
+.div-rodape-2020 .div-rodape-central { height:210px;width:24%;display:inline-block;height:210px;font-size:12px;padding-left:20px!important; }
+.div-rodape-2020 .div-rodape-central .span-1 { font-size:12px;color:#f93338;font-weight:300!important; }
+.div-rodape-2020 .div-rodape-central .span-2 { font-size:15px;color:#f93338;font-weight:600!important; }
+.div-rodape-2020 .div-rodape-central .span-3 { font-size:13px;font-weight:300!important; }
+.div-rodape-2020 .div-rodape-central .span-4 { font-size:15px;font-weight:700!important; }
+.div-rodape-2020 .div-rodape-central .span-5 { font-size:13px;font-weight:300!important; }
+.div-rodape-2020 .div-rodape-central .span-6 { font-size:15px;font-weight:700!important; }
+.input-rodape { padding:18px!important;  }
+.div-rodape-2020 .div-6 { text-align:right;  }
+.div-rodape-2020 .div-6 .div-rodape-2020-button { display:inline;padding-top:25px;   }
+.rodape-logo-grupo-jml, .rodape-logo-grupo-jml-pessoas, .rodape-logo-grupo-jml-servicos, .rodape-logo-grupo-jml-tecnologia { display:inline-table;cursor:pointer; }
+.rodape-logo-grupo-jml { padding-right:35px; }
+.rodape-logo-grupo-jml-pessoas, .rodape-logo-grupo-jml-servicos { padding-right:20px; }
+.div-rodape-logos-pequenas-desktop { border-top:1px solid #2e2e2e!important;display:table;width:100%; }
+.div-rodape-logos-pequenas-desktop-max-width { width:100%;max-width:1250px;display:table;margin:0 auto; }
+.div-rodape-logos-pequenas-desktop .box-1 { width:40%;display:inline-block;padding:20px 0px;}
+.div-rodape-logos-pequenas-desktop .box-2 { width:60%;display:inline-block;padding:20px 0px;text-align:right; }
+
+.div-rodape-logos-pequenas { display:none; width:100%;padding:20px 20px; text-align:center;border-top:1px solid #2e2e2e;border-bottom:1px solid #2e2e2e; }
+
+.logo-p-jml { display:inline-block;padding-right:15px;padding-top:5px;cursor:pointer;  }
+.logo-p-corporate-school { display:inline-block;padding-right:15px;padding-top:3px;cursor:pointer;  }
+.logo-p-academy { display:inline-block;padding-right:15px;padding-top:2px;cursor:pointer;  }
+.logo-p-connect { display:inline-block;padding-right:15px;cursor:pointer;  }
+.rodape-botao-acesse-portal { margin-left:25px;border:2px solid #fd2e34;color:#FFFFFF!important;padding:8px 30px;font-size:11px;font-weight:700!important;letter-spacing:1px;display:inline-block;border-radius:50px;-moz-transition: all 3s ease; -webkit-transition: all 3s ease; -o-transition: all 3s ease; transition: all 3s ease; }
+.rodape-botao-acesse-portal:hover { display:inline-block;background:#fd2e34;-moz-transition: all 0.300s ease; -webkit-transition: all 0.300s ease; -o-transition: all 0.300s ease;  transition: all 0.300s ease; }
+.rodape-botao-redes-sociais { display:inline-block;margin-left:4px;widthX:40px;text-align:center; border:2px solid #fd2e34;color:#FFFFFF;padding:5px;border-radius:7px;-moz-transition: background-color 3s ease; -webkit-transition: background-color 3s ease; -o-transition: background-color 3s ease; transition: background-color 3s ease; }
+.rodape-botao-redes-sociais:hover { display:inline-block;background:#fd2e34;-moz-transition: background-color 0.300s ease; -webkit-transition: background-color 0.300s ease; -o-transition: background-color 0.300s ease;  transition: background-color 0.300s ease; }
+.rodape-whatsapp-cell { display:none; }
+
+/* **************************************************************** */
+/* DEFINIÇÕES ESPECÍFICAS ABAIXO DE  1180px*/
+/* **************************************************************** */
+@media only screen and (max-width :1400px){  
+#div-mulher { padding:80px 0px!important;background-position:left top;}
+}
+
+@media only screen and (max-width :1300px){  
+.div-rodape-2020 { padding: 0px 20px ; }
+.div-rodape-logos-pequenas-desktop { padding: 0px 20px ; }
+}
+
+@media only screen and (max-width :1200px){  
+.div-rodape-2020 .div-logos-grupo-jml-texto { text-align:center!important;padding-top:25px;margin:0 auto; }
+.rodape-logo-grupo-jml, .rodape-logo-grupo-jml-pessoas, .rodape-logo-grupo-jml-servicos, .rodape-logo-grupo-jml-tecnologia { display:inline; }
+.rodape-logo-grupo-jml-pessoas, .rodape-logo-grupo-jml-servicos, .rodape-logo-grupo-jml-tecnologia { padding-top:20px; }
+.rodape-logo-grupo-jml  { display:block;padding-right:0px;margin:0 auto; }
+}
+
+@media only screen and (max-width :1100px){ 
+.rodape-logo-grupo-jml, .rodape-logo-grupo-jml-pessoas, .rodape-logo-grupo-jml-servicos, .rodape-logo-grupo-jml-tecnologia { display:inline-table; }
+.rodape-logo-grupo-jml { padding-right:35px; }
+.rodape-logo-grupo-jml-pessoas, .rodape-logo-grupo-jml-servicos { padding-right:20px; }
+.div-rodape-2020 .div-logos-grupo-jml { height:auto; width:100%;padding:50px 20px; }
+.div-rodape-2020 .div-logos-grupo-jml-texto { padding-top:0px; }
+.div-rodape-2020 .div-rodape-infos-empresa-desktop, .div-rodape-2020 .div-rodape-central-desktop { display:none; }
+.div-rodape-2020 .div-rodape-infos-empresa { height:auto;width:50%;border-left:none!important;border-right:none;padding:50px 20px; }
+.div-rodape-2020 .div-rodape-central { height:auto;width:50%;padding-left:none!important;padding:50px 20px; }
+.div-rodape-2020 .div-rodape-infos-empresa-texto { padding-top:0px; }
+.div-rodape-2020 .div-rodape-central-texto { padding-top:0px; }
+.div-rodape-logos-pequenas-desktop .box-1 { display:none; }
+.div-rodape-logos-pequenas-desktop .box-2 { width:100%;text-align:center;padding:30px 20px; }
+.div-rodape-logos-pequenas { display:block; }
+}
+
+@media only screen and (max-width :1030px){  
+#div-mulher			{ padding:80px 0px!important;background-image:url('https://www.jmleventos.com.br/images/rodape-2020/div-mulher.jpg');background-position:center top;background-repeat:no-repeat;background-size:cover;background-attachment:scroll;}
+}
+
+
+
+@media only screen and (max-width :770px){ 
+#div-newsletter-2020 { padding:20px!important; }
+.div-newsletter-2020-button { width:100%; } 
+#div-mulher			{ padding:80px 0px!important;background-image:url('https://www.jmleventos.com.br/images/rodape-2020/div-mulher.jpg');background-position:center top;background-repeat:no-repeat;background-size:cover;background-attachment:scroll;}
+
+
+.div-rodape-2020		{ padding:30px 0px!important;text-align:center; }
+.div-rodape-2020 .div-topo-rodape { margin:0 auto;padding-bottom:30px; }
+.div-rodape-2020 .div-rodape-infos-empresa { width:100%;padding-top:50px;padding-bottom:5px;font-size:15px;line-height:20px; }
+.div-rodape-2020 .div-rodape-central { width:100%;font-size:15px;padding:20px;padding-bottom:15px; }
+.div-rodape-2020 .div-rodape-central .span-1 { font-size:15px; }
+.div-rodape-2020 .div-rodape-central .span-2 { font-size:15px;display:block; }
+.div-rodape-2020 .div-rodape-central .span-3 { font-size:15px;display:block;  }
+.div-rodape-2020 .div-rodape-central .span-4 { font-size:15px;display:block;  }
+.div-rodape-2020 .div-rodape-central .span-5 { font-size:15px;display:block;  }
+.div-rodape-2020 .div-rodape-central .span-6 { font-size:15px;display:block;  }
+.div-rodape-2020 .div-6 { text-align:right;  }
+.div-rodape-2020 .div-6 .div-rodape-2020-button { display:block;padding:25px 0px;;margin:0 auto;  }
+.rodape-botao-acesse-portal { margin-top:20px;width:auto; }
+.rodape-botao-acesse-portal { margin-left:auto; }
+
+.rodape-whatsapp-cell { display:inline-block; }
+.rodape-whatsapp-desktop { display:none;  }
+}
+
+
+
+@media only screen and (max-width :500px){ 
+.rodape-botao-acesse-portal { padding:10px 15px; }
+ 
+.rodape-botao-redes-sociais { margin-top:10px!important; }
+.rodape-logo-grupo-jml { display:block;padding-right:0px; }
+.rodape-logo-grupo-jml-pessoas, .rodape-logo-grupo-jml-servicos, .rodape-logo-grupo-jml-tecnologia { padding:10px;padding-top:30px; width:80px; }
+.logo-p-jml,  .logo-p-corporate-school, .logo-p-academy, .logo-p-connect { padding:15px; }
+
+}

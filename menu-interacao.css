@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900);
+
+
+.div-menu-integracao-2020 { font-family:'Montserrat', sans-serif!important;font-weight:400;width:100%;display:table;background-color:#25252b;padding:10px;padding-left:25px; }
+.div-menu-integracao-2020-box-1 { font-family:'Montserrat', sans-serif!important;font-weight:400;display:inline-block;width:50%;color:#a5b0b2;font-size:12px!important;  }
+.div-menu-integracao-2020-box-2 { font-family:'Montserrat', sans-serif!important;font-weight:400;display:inline-block;width:50%;text-align:right; }
+.a-div-menu-integracao-solucoes-jml { display:inline-block;font-size:12px!important; }
+.div-menu-integracao-solucoes-jml { display:inline-block;padding-left:10px;cursor:pointer;font-size:12px!important; }
+.div-menu-integracao-solucoes-jml:hover { color:#ffffff; }
+.div-menu-integracao-2020-seta-down { display:inline-block;padding-left:10px; }
+.div-sub-menu-integracao-2020 { list-style:none; font-family:'Montserrat', sans-serif!important;font-weight:400; display:table;display:none;background-color:#34343b;border-bottom-left-radius:10px;border-bottom-right-radius:10px;padding:10px;padding-top:10px;padding-bottom:15px; position:absolute;top:53px;z-index:20;font-size:12px;padding-right:35px; }
+.div-sub-menu-integracao-2020 a { color:#a5b0b2;display:inline-table;padding:5px; }
+.div-sub-menu-integracao-2020 a:hover { color:#ffffff; }
+.div-menu-integracao-2020-botao-acesse-portal { border:2px solid #fd2e34;color:#b0b0b0!important;padding:8px 15px;font-size:9px;letter-spacing:1px; font-weight:600!important;letter-spacing:1px;display:inline-block;border-radius:50px;-moz-transition: all 3s ease; -webkit-transition: all 3s ease; -o-transition: all 3s ease; transition: all 3s ease;cursor:pointer; }
+.div-menu-integracao-2020-botao-acesse-portal:hover { display:inline-block;background:#fd2e34;-moz-transition: all 0.300s ease; -webkit-transition: all 0.300s ease; -o-transition: all 0.300s ease;  transition: all 0.300s ease;color:#ffffff!important; }
+.div-menu-integracao-2020-botao-redes-sociais { margin-left:8px;widthX:40px;text-align:center; border:2px solid #fd2e34;color:#FFFFFF;padding:5px;display:inline-block;border-radius:7px;-moz-transition: all 3s ease; -webkit-transition: all 3s ease; -o-transition: all 3s ease; transition: all 3s ease;cursor:pointer; }
+.div-menu-integracao-2020-botao-redes-sociais:hover { display:inline-block;background:#fd2e34;-moz-transition: all 0.300s ease; -webkit-transition: all 0.300s ease; -o-transition: all 0.300s ease;  transition: all 0.300s ease; }
+.menu-integracao-ocultar { font-size:9px!important; }
+.menu-integracao-whatsapp-cell { display:none; }
+
+/* **************************************************************** */
+/* DEFINIÇÕES ESPECÍFICAS ABAIXO DE  1180px*/
+/* **************************************************************** */
+@media only screen and (max-width :1400px){  
+
+}
+
+@media only screen and (max-width :1300px){  
+
+}
+
+@media only screen and (max-width :1200px){  
+
+}
+
+@media only screen and (max-width :1100px){ 
+
+}
+
+@media only screen and (max-width :1030px){  
+
+}
+
+@media only screen and (max-width :770px){ 
+.menu-integracao-whatsapp-cell { display:inline-block; }
+.menu-integracao-whatsapp-desktop { display:none; }
+}
+
+@media only screen and (max-width :500px){ 
+.div-menu-integracao-solucoes-jml { padding-left:3px; }
+.div-menu-integracao-2020-seta-down { padding-left:5px; }
+.div-menu-integracao-2020 { padding-left:10px; }
+.menu-integracao-ocultar { display:none; }
+.div-menu-integracao-2020-botao-acesse-portal { padding:6px 12px; }
+.div-sub-menu-integracao-2020 { font-size:14px;padding-right:35px; }
+.div-sub-menu-integracao-2020 a { color:#a5b0b2;display:inline-table;padding:10px 5px;; }
+}
+@media only screen and (max-width :330px){ 
+.div-menu-integracao-solucoes-jml { padding-left:2px; }
+.div-menu-integracao-2020-seta-down { padding-left:4px; }
+.div-menu-integracao-2020 { padding-left:8px; }
+.menu-integracao-ocultar { display:none; }
+.div-menu-integracao-2020-botao-acesse-portal { padding:8px 10px; }
+.div-menu-integracao-2020-botao-redes-sociais { margin-left:5px; }
+}

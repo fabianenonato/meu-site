@@ -1,0 +1,739 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<header>
+
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MS7DKK8');</script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '312206612902782');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=312206612902782&ev=PageView&noscript=1"
+    /></noscript><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Educa&ccedil;&atilde;o Corporativa &ndash; Curso In Company | Soluções em Capacitação e Aperfeiçoamento para Administração Pública e Sistema S - Grupo JML">
+    <meta name="author" content="Grupo JML">
+    <link rel="icon" href="https://www.jmleventos.com.br/favicon.ico">
+    <title>Educa&ccedil;&atilde;o Corporativa &ndash; Curso In Company | Solu&ccedil;&otilde;es em Capacita&ccedil;&atilde;o e Aperfei&ccedil;oamento para Administra&ccedil;&atilde;o P&uacute;blica e Sistema "S" - Grupo JML</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/scrolling-nav.css" rel="stylesheet" type="text/css">
+    <link href="css/css.css?v=035046" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel-core.min.js"></script>
+    <script type="text/javascript" src="js/jquery.anchor.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/scrolling-nav.js"></script>
+    <script type="text/javascript">
+
+        // ####################################################################################
+        // MÁSCARA DE CNPJ E CPF AO MESMO TEMPO
+        // ####################################################################################
+        function mascaraCPF_CNPJ(o,f){
+            v_obj=o
+            v_fun=f
+            setTimeout('execmascara()',1)
+        }
+
+        function execmascara(){
+            v_obj.value=v_fun(v_obj.value)
+        }
+
+        function cpfCnpj(v){
+            v=v.replace(/\D/g,"")
+            if (v.length > 12) { //CNPJ
+                v=v.replace(/^(\d{2})(\d)/,"$1.$2")
+                v=v.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3")
+                v=v.replace(/\.(\d{3})(\d)/,".$1/$2")
+                v=v.replace(/(\d{4})(\d)/,"$1-$2")
+            }
+            if (v.length < 12) { //CPF
+                v=v.replace(/(\d{3})(\d)/,"$1.$2")
+                v=v.replace(/(\d{3})(\d)/,"$1.$2")
+                v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+            }
+
+            return v
+        }
+
+        $(document).ready(function($s) {
+//////////////////////////////////////////////////////////////////////////////////////
+            $('.navbar-toggle').click(function(){
+                //get collapse content selector
+                var collapse_content_selector = $(this).attr('href');
+                //make the collapse content to be shown or hide
+                var toggle_switch = $(this);
+                $(collapse_content_selector).toggle(function(){
+                    if($(this).css('display')=='none'){
+                        //change the button label to be 'Show'
+                        toggle_switch.html('<i class="fa fa-bars font-size-30 branco" ></i>');
+                    }else{
+                        //change the button label to be 'Hide'
+                        toggle_switch.html('<i class="fa fa-bars font-size-30 branco" ></i>');
+                    }
+                });
+            });
+
+//////////////////////////////////////////////////////////////////////////////////////
+            (function(a){(jQuery.browser=jQuery.browser||{}).mobile=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))})(navigator.userAgent||navigator.vendor||window.opera);
+            if(jQuery.browser.mobile) { $(".hide-menu").click(function(){ $("#abre-fecha-menu").hide(2000);	}); }
+        });
+
+        //////////////////////////////////////////////////////////////////////////////////////
+        function cidades(id){
+            $.ajax({
+                type: "GET",
+                url: "auto_complete.php?area=cidades&campo_uf=estado&campo_cidade=cidade",
+                data: "id=" + id,
+                beforeSend: function() {$('#CIDADES').html('<div  class="form-control formulario border-radius-none  padding5" >  Carregando cidades... </div>'); // ...mensagem de espera
+                },
+                success: function(txt) {
+                    $('#CIDADES').html(txt);
+                },
+                error: function(txt) {         // em caso de erro você pode dar um alert('msg erro');
+                    alert('Desculpe, houve um erro interno.');
+                }
+            });
+        }
+
+    </script>
+
+    </head>
+    <body >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS7DKK8"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+            //$(window).resize(function(){ var w = $(window).width();	if(w > 320 && menu.is(':hidden')) {	menu.removeAttr('style');} });
+        }
+    </script>
+    <style type="text/css">
+        #progress-container { position: fixed;top: 0px;z-index: 1;width: 100%;}
+        #progress-bar-container { width: 00%;height: 0px; }
+        #progress-bar { height: px;background-image:-webkit-linear-gradient(90deg, #990000, #990000);background-image:linear-gradient(90deg, #990000, #990000);width: 0%;}
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".div-menu-integracao-solucoes-jml").click(function(){ $(".div-sub-menu-integracao-2020").fadeToggle(); });
+        });
+    </script>
+    <link href="https://www.jmleventos.com.br/images/menu-interacao/menu-interacao.css?v=20210225035046" rel="stylesheet">
+    <div class="div-menu-integracao-2020">
+        <div class="div-menu-integracao-2020-box-1">
+            <a href="https://www.jmleventos.com.br/" class="a-div-menu-integracao-solucoes-jml"><img src="https://www.jmleventos.com.br/images/menu-interacao/logo_grupo_jml.png" /></a>
+            <div class="div-menu-integracao-solucoes-jml">Soluções JML <img src="https://www.jmleventos.com.br/images/menu-interacao/seta-down.png" class="div-menu-integracao-2020-seta-down" /></div></div>
+        <ul class="div-sub-menu-integracao-2020">
+            <li><a href="https://www.jmleventos.com.br/">Portal JML</a></li>
+            <li><a href="https://ead.jmlgrupo.com.br/">EAD JML</a></li>
+            <li><a href="https://orientacoes.jmlgrupo.com.br/">Orientações JML</a></li>
+            <li><a href="https://pesquisabrasil.jmlgrupo.com.br/">Pesquisa Brasil</a></li>
+            <li><a href="https://rjml.jmlgrupo.com.br/">RJML Digital</a></li>
+            <li><a href="https://plataformas.jmlgrupo.com.br/">Plataforma S</a></li>
+            <li><a href="https://www.webjml.com.br/">Web JML</a></li>
+        </ul>
+        <div class="div-menu-integracao-2020-box-2"><div class="div-menu-integracao-2020-botao-acesse-portal"  onClick="document.location.href='http://www.jmleventos.com.br'"><span class="menu-integracao-ocultar">ACESSE O</span> PORTAL JML</div><div class="div-menu-integracao-2020-botao-redes-sociais">
+            <a href="whatsapp://send?phone=5541996226851&text=Contato via do WhatsApp." target="_blank" class="a-div-menu-integracao-solucoes-jml menu-integracao-whatsapp-cell"><img src="https://www.jmleventos.com.br/images/menu-interacao/icon-whatsapp.png"/></a>
+            <a href="https://web.whatsapp.com/send?phone=5541996226851&&text=Contato via do WhatsApp." target="_blank" class="a-div-menu-integracao-solucoes-jml menu-integracao-whatsapp-desktop"><img src="https://www.jmleventos.com.br/images/menu-interacao/icon-whatsapp.png"/></a>
+        </div></div>
+    </div>
+
+
+
+
+    <!---->
+    <div id="progress-container"><div id="progress-bar-container"><div id="progress-bar"></div></div></div>
+
+
+
+
+
+
+    <!-- DIV TOPO -->
+    <div id="top" class="display-none"></div>
+    <div id="topo" class="transition">
+        <div id="menu" class="col-lg-2 col-md-3 col-sm-4 col-xs-12 transition">
+            <div class="centralizar-texto"><img src="images/logo_in_company.png" class="img-responsive" /></div>
+
+
+            <script>
+                $(window).load(function(){
+                    $('.div-lightbox').hide(1000);
+                    $('#topo-logo').click(function(){ $('.nav-integracao').fadeToggle(); });
+                    $('.menu-tradicional').click(function(){ $('.div_menu_triangle').addClass("display-none"); $('.menu-tradicional .div_menu_triangle').removeClass("display-none"); $('.menu-clear').removeClass("menu-selecionado"); $('.menu-tradicional').addClass("menu-selecionado"); $('.menu-tradicional .titulo').removeClass("menu-titulo-branco"); $('.menu-tradicional .titulo').addClass("menu-titulo-branco"); $('.titulo-esconder').hide(); $('#topo-tradicional').fadeIn(500); $('#topo').removeClass("topo-bg-1 topo-bg-2 topo-bg-3 topo-bg-4"); $('#topo').addClass("topo-bg-1");  });
+                    $('.menu-compartilhado').click(function(){ $('.div_menu_triangle').addClass("display-none"); $('.menu-compartilhado .div_menu_triangle').removeClass("display-none"); $('.menu-clear').removeClass("menu-selecionado"); $('.menu-compartilhado').addClass("menu-selecionado"); $('.menu-compartilhado .titulo').removeClass("menu-titulo-branco"); $('.menu-compartilhado .titulo').addClass("menu-titulo-branco"); $('.titulo-esconder').hide(); $('#topo-compartilhado').fadeIn(500); $('#topo').removeClass("topo-bg-1 topo-bg-2 topo-bg-3 topo-bg-4"); $('#topo').addClass("topo-bg-2");  });
+                    $('.menu-setorizado').click(function(){ $('.div_menu_triangle').addClass("display-none"); $('.menu-setorizado .div_menu_triangle').removeClass("display-none"); $('.menu-clear').removeClass("menu-selecionado"); $('.menu-setorizado').addClass("menu-selecionado"); $('.menu-setorizado .titulo').removeClass("menu-titulo-branco"); $('.menu-setorizado .titulo').addClass("menu-titulo-branco"); $('.titulo-esconder').hide(); $('#topo-setorizado').fadeIn(500); $('#topo').removeClass("topo-bg-1 topo-bg-2 topo-bg-3 topo-bg-4"); $('#topo').addClass("topo-bg-3");  });
+                    $('.menu-semi').click(function(){ $('.div_menu_triangle').addClass("display-none"); $('.menu-semi .div_menu_triangle').removeClass("display-none"); $('.menu-clear').removeClass("menu-selecionado"); $('.menu-semi').addClass("menu-selecionado"); $('.menu-semi .titulo').removeClass("menu-titulo-branco"); $('.menu-semi .titulo').addClass("menu-titulo-branco"); $('.titulo-esconder').hide(); $('#topo-semi').fadeIn(500); $('#topo').removeClass("topo-bg-1 topo-bg-2 topo-bg-3 topo-bg-4"); $('#topo').addClass("topo-bg-4");  });
+                });
+            </script>
+
+
+            <ul class="menu transition">
+                <span href="#topo-tradicional" class="page-scroll"><li class="menu-tradicional transition menu-clear"><div class="div_menu_triangle display-none"><div class="menu_triangle"></div></div> In Company <span class="titulo">Tradicional</span></li></span>
+                <span href="#topo-compartilhado" class="page-scroll"><li class="menu-compartilhado transition menu-clear"><div class="div_menu_triangle display-none"><div class="menu_triangle"></div></div> In Company <span class="titulo">Compartilhado</span></li></span>
+                <span href="#topo-setorizado" class="page-scroll"><li class="menu-setorizado transition menu-clear"><div class="div_menu_triangle display-none"><div class="menu_triangle"></div></div> In Company <span class="titulo">Educação Setorizada</span></li></span>
+                <span href="#topo-semi" class="page-scroll"><li class="menu-semi transition menu-clear"><div class="div_menu_triangle display-none"><div class="menu_triangle"></div></div> In Company <span class="titulo">Semi Presencial</span></li></span>
+            </ul>
+
+        </div>
+
+        <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12 transition titulos-menu">
+            <div id="topo-logo" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right cursor"><img src="images/topo-logo.png" title="OUTROS SERVIÇOS JML" /></div>
+
+            <div id="topo-tradicional" class="titulo-esconder">
+                <span class="texto1">Capacitação </span>
+                <span class="texto2">sob </span>
+                <span class="texto3">medida. </span>
+                <span class="texto4">A qualidade JML na <strong>sua entidade</strong>.</span>
+                <a id="go-to-tradicional" href="#educacao-corporativa" class="page-scroll"><img src="images/menu-conheca.png" class="bt-conheca" /></a>
+            </div>
+
+            <div id="topo-compartilhado" class="display-none titulo-esconder">
+                <span class="texto1">A união para o </span>
+                <span class="texto2">resultado</span>
+                <span class="texto3">comum.</span>
+                <span class="texto4">Sua equipe capacitada <strong>sob medida</strong>.</span>
+                <a id="go-to-compartilhado"  href="#educacao-corporativa-compartilhada" class="page-scroll"><img src="images/menu-conheca.png" class="bt-conheca" /></a>
+            </div>
+
+            <div id="topo-setorizado" class="display-none titulo-esconder">
+                <span class="texto1">Educação setorizada em</span>
+                <span class="texto2">Licitações </span>
+                <span class="texto3"><span style="color:#FFFFFF;">& </span> Contratos<span style="color:#FFFFFF;">.</span></span>
+                <span class="texto4">Módulos teóricos e práticos específicos para cada setor.</span>
+                <a id="go-to-setorizado"  href="#educacao-corporativa-setorizada" class="page-scroll"><img src="images/menu-conheca.png" class="bt-conheca" /></a>
+            </div>
+
+            <div id="topo-semi" class="display-none titulo-esconder">
+                <span class="texto1">A solução certa na </span>
+                <span class="texto2">medida exata </span>
+                <span class="texto3">da sua necessidade.</span>
+                <span class="texto4">A excelência em capacitação da JML, com baixo custo.</span>
+                <a id="go-to-semi"  href="#educacao-corporativa-semi-presencial" class="page-scroll"><img src="images/menu-conheca.png" class="bt-conheca" /></a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div id="box-ead" class=" transition">
+        <div class="max-width-990  centralizar">
+            <img src="images/banners-2020/banner_incompany_EAD.jpg" class="img-responsive centralizar" />
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- box-1 - In Company Tradicional  -->
+    <a name="educacao-corporativa" id="educacao-corporativa"></a>
+    <div id="box-1" class=" transition">
+        <div class="max-width-1200  centralizar">
+            <div class="text-center bg-titulo-linha"><span class="titulo-incompany">In Company</span><span class="titulo-incompany-tipo" style="color:#7f7fe2;"><strong>Tradicional</strong></span><div class="titulo-incompany-linha"></div></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 transition">
+                <div class="texto1">
+<span class="fundo-texto">
+Sua organização busca <strong>aprimorar conhecimento</strong>?<br /><br />
+<strong>Segurança</strong> na
+tomada de decisão?<br /><br />
+Potencializar os
+<strong>valores humanos</strong> e destacar os <strong>talentos das pessoas</strong>?
+</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 transition">
+                <div class="texto2">
+                    A JML possui uma equipe especializada que compreende a demanda de cada cliente e elabora conteúdos focados em casos concretos e temas de maior interesse de cada entidade.
+                    <br /><br />
+                    Alicerçada pela qualidade e seriedade profissional, a JML se tornou referência nacional em cursos e treinamentos para a Administração Pública e Sistema "S", já tendo realizado mais de <strong>600 eventos</strong>, que contaram com aproximadamente <strong>40 mil capacitados</strong>.
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 transition">
+                <div class="texto3">
+                    <div class="gestao">
+                        <div class="titulo">Na área de <strong>GESTÃO</strong>,</div>
+                        a JML busca o sincronismo organizacional caracterizado pela integração de três importantes fatores: <strong>ESTRATÉGIA, PROCESSOS e PESSOAS</strong>, com o propósito de obter sempre alinhamento estratégico aos objetivos da organização;
+                    </div>
+                    <div class="contratacao">
+                        <div class="titulo">no Jurídico - <strong>CONTRATAÇÃO</strong>,</div>
+                        o escopo é: <strong>SEGURANÇA JURÍDICA, GESTÃO EFICAZ, PLANEJAMENTO e EFICIÊNCIA</strong>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- box-2 - Como funciona  -->
+    <div id="box-2" class=" transition">
+        <div id="box-2-1" class="col-lg-7 col-md-12 col-sm-12 col-xs-12 transition">
+            <div class="conteudo">
+                <span class="titulo1">Como funciona</span>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 transition div-box">
+                    <div class="div-icone"><div class="icone" style="background-position:0px 0px;"></div></div>
+                    <div class="box">
+                        <div class="box_interno bi1">O cliente escolhe o tema de seu interesse.</div></div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 transition div-box">
+                    <div class="div-icone"><div class="icone" style="background-position:0px -115px;"></div></div>
+                    <div class="box"><div class="box_interno bi2">A JML apresenta a melhor metodologia, o conteúdo, a carga horária e o palestrante mais indicado.</div></div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 transition div-box">
+                    <div class="div-icone"><div class="icone" style="background-position:0px -235px;"></div></div>
+                    <div class="box"><div class="box_interno bi3">As partes negociam a melhor data e local para realização do evento. A JML prepara o material didático totalmente voltado à realidade do cliente.</div></div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 transition div-box div-box-col-lg-6">
+                    <div class="div-icone"><div class="icone" style="background-position:0px -360px;"></div></div>
+                    <div class="box"><div class="box_interno bi4">O curso é realizado com a excelência da JML. Mas não paramos por aqui! Para garantir a assimilação do conteúdo programático, a JML ainda coloca à disposição do cliente a Leitura Complementar pós-capacitação.</div></div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 transition div-box div-box-col-lg-6">
+                    <div class="div-icone"><div class="icone" style="background-position:0px -480px;"></div></div>
+                    <div class="box"><div class="box_interno bi5">Além do material de apoio, apostilas e livros entregues quando da certificação da capacitação, o cliente terá 20 dias de acesso gratuito em um destes três serviços fornecidos pela JML: Pesquisa Brasil, Plataforma S ou WEB JML.</div></div>
+                </div>
+                <a href="arquivos/JML_CONSULTORIA_E_EVENTOS_Eventos_Realizados_Temas.pdf" target="_blank"><img src="images/bt_conheca_os_temas.png" class="img-responsive centralizar bt_conheca_os_temas" /></a>
+            </div>
+        </div>
+        <div id="box-2-2" class="col-lg-5 col-md-12 col-sm-12 col-xs-12 transition">
+            <div class="conteudo">
+                <span class="titulo1">Diferenciais</span>
+                <span class="titulo2">DO IN COMPANY</span>
+                <ul class="diferenciais">
+                    <li class="dif1"><strong>Material did&aacute;tico</strong> totalmente customizado para a realidade do cliente e de alta qualidade t&eacute;cnica e gr&aacute;fica;</li>
+                    <li class="dif2"> Melhor <strong>rela&ccedil;&atilde;o custo x benef&iacute;cio</strong>, com a capacita&ccedil;&atilde;o de um maior grupo, com menor disp&ecirc;ndio de recursos;</li>
+                    <li class="dif3"> <strong>Profissionalismo</strong>, pontualidade, compromisso pedag&oacute;gico e corpo docente diferenciado;</li>
+                    <li class="dif4"> <strong>Programas multidisciplinares</strong>:  jur&iacute;dicos e de gest&atilde;o;</li>
+                    <li class="dif5"> Mais de <strong>40 mil agentes p&uacute;blicos e privados</strong> capacitados em 10 anos;</li>
+                    <li class="dif6"> Mais de <strong>600 encontros</strong>, semin&aacute;rios, eventos e cursos abertos j&aacute; realizados;</li>
+                    <li class="dif7"> Mais de <strong>400 projetos in company</strong> e de educa&ccedil;&atilde;o corporativa.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- box-3 In Company Compartilhado -->
+    <a name="educacao-corporativa-compartilhada" id="educacao-corporativa-compartilhada"></a>
+    <div id="box-3" class=" transition">
+        <div class="max-width-1200  centralizar">
+            <div class="text-center bg-titulo-linha"><span class="titulo-incompany">In Company</span><span class="titulo-incompany-tipo" style="color:#ff9649;"><strong>Compartilhado</strong></span><div class="titulo-incompany-linha" style="border-color:#9797f1;"></div></div>
+
+            <div class="div-box-3-bt-bg">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 transition div-box-3-bt-bg">
+                    <div class="box-3-bt-bg box-3-bt-bg1">Seu órgão precisa capacitar alguns servidores, porém, não tem recurso para contratar sozinho um curso in company? </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 transition div-box-3-bt-bg">
+                    <div class="box-3-bt-bg box-3-bt-bg2">
+                        <span class="div-box-3-bt-bg-txt1">A JML tem a solução:</span>
+                        <span class="div-box-3-bt-bg-txt2">A <span style="color:#ff9649">união</span> para o <span style="color:#b5b5ff">resultado comum</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-width-800 texto1 centralizar"> A necessidade da sua entidade pode ser a mesma de outros parceiros. A JML, atenta às necessidades dos clientes e as tendências de mercado, foi pioneira na realização de treinamentos compartilhados, que consistem em cursos realizados em conjunto por entidades que possuam necessidades similares, visando redução de custos e a troca de experiência, garantida a mesma qualidade do curso in company.</span>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- box-4   -->
+    <div id="box-4" class=" transition">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 transition">
+            &nbsp;
+        </div>
+
+        <div id="box-4-2" class="col-lg-6 col-md-12 col-sm-12 col-xs-12 transition">
+            <div class="conteudo">
+                <span class="titulo1">Como funciona</span>
+                <span class="titulo2">O CURSO COMPARTILHADO</span>
+                <ul class="diferenciais">
+                    <li class="dif1">A jml identifica órgãos com <strong>interesses comuns</strong>;</li>
+                    <li class="dif2"> Em conjunto com esses órgãos define o <strong>conteúdo programático</strong> do curso;</li>
+                    <li class="dif3">Um dos órgãos disponibiliza o <strong>local</strong> para a realização do evento;</li>
+                    <li class="dif4"> Cada órgão define o número de <strong>participantes</strong>;</li>
+                    <li class="dif5"> A jml prepara o <strong>material didático</strong> do curso adaptado à realidade dos órgãos participantes.</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- box-5   -->
+    <div id="box-5" class=" transition">
+        <div class=" max-width-1200 centralizar">
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 transition div-boxes-5"><div class="box1"><img src="images/box-5-1.png" class="box1-img" /> <span class="box1-texto">2 ou mais entidades</span></div></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 transition div-boxes-5"><div class="box2"><img src="images/box-5-2.png" class="box2-img" /> <span class="box2-texto">Redução de custos</span></div></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 transition div-boxes-5"><div class="box3"><img src="images/box-5-3.png" class="box3-img" /> <span class="box3-texto">Viabilidade econômica</span></div></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 transition div-boxes-5"><div class="box4"><img src="images/box-5-4.png" class="box4-img" /> <span class="box4-texto">A Excelência Pedagógica da JML</span></div></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 transition div-boxes-5"><div class="box5"><img src="images/box-5-5.png" class="box5-img" /> <span class="box5-texto">Networking entre órgãos com necessidades similares</span></div></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 transition div-boxes-5"><div class="box6">Sua equipe <span class="box6-texto">capacitada</span> sob medida!</div></div>
+            <a href="arquivos/JML_CONSULTORIA_E_EVENTOS_Eventos_Realizados_Temas.pdf" target="_blank"><img src="images/box-5-bt.png" class="box-5-bt img-responsive" /></a>
+        </div>
+    </div>
+
+    <!-- box-6  -->
+    <a name="educacao-corporativa-setorizada" id="educacao-corporativa-setorizada"></a>
+    <div id="box-6" class=" transition">
+        <div class="max-width-1200 centralizar">
+            <div class="text-center bg-titulo-linha"><span class="box-6-titulo-incompany">In Company</span><span class="box-6-titulo-incompany-tipo" style="color:#ff9649;"><strong>Educação Setorizada</strong></span><div class="box-6-titulo-incompany-linha"></div></div>
+            <div class="box-6-texto-1">Módulos <strong>teóricos e práticos</strong>, específicos para <strong>cada setor</strong>.</div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 transition">
+                &nbsp;
+            </div>
+
+            <div id="box-6-2" class="col-lg-6 col-md-12 col-sm-12 col-xs-12 transition">
+                <div class="conteudo">
+                    <ul class="diferenciais">
+                        <li class="dif1">Procura uma capacitação que caiba no orçamento?</li>
+                        <li class="dif2">Precisa de uma capacitação diferenciada, com módulos curtos e focados na necessidade de cada setor?</li>
+                    </ul>
+
+                    <div class="box-6-texto-2">Então a JML tem </div>
+                    <div class="box-6-texto-3">exatamente o que você precisa.</div>
+                    <div class="box-6-texto-4">Cursos com <strong>temática específica</strong> para trabalhar as atribuições e responsabilidades de cada setor envolvido no <strong>processo licitatório</strong> e nas <strong>contratações diretas</strong>.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-6-faixa-preta">
+            <div class="max-width-1200 centralizar">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 transition box-6-faixa-preta-1">Esse projeto especial pode ser <strong>totalmente sob medida</strong>. </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 transition box-6-faixa-preta-2"><a href="arquivos/JML_CONSULTORIA_E_EVENTOS_Setorizado.pdf" target="_blank"><img src="images/box-6-bt.png" class="centralizar img-responsive box-6-bt" /><img src="images/box-6-bt-responsive.png" class="centralizar img-responsive box-6-bt-responsive" /></a></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- box-7  -->
+    <a name="educacao-corporativa-semi-presencial" id="educacao-corporativa-semi-presencial"></a>
+    <div id="box-7" class=" transition">
+        <div class="max-width-1200  centralizar">
+            <div class="text-center bg-titulo-linha"><span class="titulo-incompany">In Company</span><span class="titulo-incompany-tipo" style="color:#ff9649;"><strong>Semi Presencial</strong></span><div class="titulo-incompany-linha" style="border-color:#9797f1;"></div></div>
+            <div class="box-7-texto-1">A SOLUÇÃO CERTA NA <span style="color:#7f7fe2"> MEDIDA EXATA</span> DA SUA NECESSIDADE!<br />
+                A <span style="color:#7f7fe2">EXCELÊNCIA</span> EM CAPACITAÇÃO DA JML, COM <span style="color:#7f7fe2">BAIXO CUSTO</span>.</div>
+            <div class="box-7-linha"><span class="box-7-texto-2">Como funciona</span></div>
+        </div>
+    </div>
+
+
+
+    <!-- box-8  -->
+    <div id="box-8" class=" transition">
+        <div class="max-width-1200 centralizar">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 transition div-boxes"><div class="box1"><img src="images/box-9-icon-1.png" class="centralizar" /> A entidade adquire um plano corporativo de EAD JML, com o mínimo de 40 acessos e ganha
+                <strong>8 horas de workshop presencial  na sua entidade/órgão,</strong>
+                para tirar dúvidas sobre o
+                curso contratado.</div></div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 transition div-boxes"><div class="box2"><img src="images/box-9-icon-2.png" class="centralizar" />  CORTESIA <strong>material digital.</strong></div></div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 transition div-boxes"><div class="box3"><img src="images/box-9-icon-3.png" class="centralizar" />  LEITURA COMPLEMENTAR
+                <strong>3 meses de leitura complementar</strong>
+                no Pesquisa Brasil<br class="RES768-display-none" />
+                ou Plataforma S.
+            </div></div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 transition div-boxes"><div class="box4"><img src="images/box-9-icon-4.png" class="centralizar" /> PROFESSORES
+                <strong>Workshop presencial</strong> com um dos renomados professores do grupo.
+                Despesas pagas pela JML.
+            </div></div>
+
+            <div class="centralizar sob-medida">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 transition box-8-faixa-preta-1">Esse projeto especial pode ser <strong>totalmente sob medida</strong>. </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 transition box-8-faixa-preta-2"><a href="arquivos/JML_CONSULTORIA_E_EVENTOS_SemiPresencial.pdf" target="_blank"><img src="images/box-9-bt.png" class="centralizar img-responsive box-9-bt" /><img src="images/box-9-bt-responsive.png" class="centralizar img-responsive box-9-bt-responsive" /></a></div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- box-3 In Company Compartilhado -->
+    <div id="educacao-corporativa-compartilhada" class=" transition display-none">
+        <div class="max-width-1200  centralizar">
+            <div class="text-center bg-titulo-linha"><span class="titulo-incompany">Conheça</span><span class="titulo-incompany-tipo" style="color:#ff9649;"><strong>Mais</strong></span><div class="titulo-incompany-linha" style="border-color:#9797f1;"></div></div>
+
+            <div class="div-box-3-bt-bg">
+                <a href="https://www.jmleventos.com.br/ftp/incompany/Historico_JML_2018.pdf" target="_blank">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 transition div-box-3-bt-bg">
+                        <div class="box-3-bt-bg "><img src="images/pdf_icon.png" class="pR15" /> Histórico JML </div>
+                    </div>
+                </a>
+
+                <a href="arquivos/JML_CONSULTORIA_E_EVENTOS_InCompany.pdf" target="_blank">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 transition div-box-3-bt-bg">
+                        <div class="box-3-bt-bg ">
+                            <span class="div-box-3-bt-bg-txt1"><img src="images/pdf_icon.png" class="pR15" /> Educação Corporativa</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- CONTATO CONTATO CONTATO CONTATO CONTATO CONTATO CONTATO CONTATO CONTATO CONTATO CONTATO CONTATO CONTATO  -->
+    <a name="contrate"></a>
+    <div id="contrate" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 display-noneX">
+        <div class="container max-width-990 padding0">
+            <div class="text-center bg-titulo-linha-contrate">SOLICITE UMA SIMULAÇÃO DE PROGRAMA PARA SUA ORGANIZAÇÃO!</div>
+
+
+            <div class="max-width-990  centralizar pB50">
+                <img src="images/banners-2020/banner_incompany_EAD.jpg" class="img-responsive centralizar" />
+            </div>
+
+
+
+
+            <script type="text/javascript">
+                function upper(obj) { obj.value=obj.value.toUpperCase(); }
+                function lower(obj) { obj.value=obj.value.toLowerCase(); }
+
+                $(document).ready(function(){
+// #########################################################################################################
+                    requiredFORM_INCOMPANY = ["oep","contato","cnpj","responsavel","setor","carga_horaria","participantes","mensagem","ddd","telefone","cidade","email"];
+                    email = $("#email");
+                    errornotice = $("#error");
+                    emptyerror = "Preencha este campo";
+                    emailerror = "E-mail incorreto";
+                    $("#FORM_INCOMPANY").submit(function(){	for (i=0;i<requiredFORM_INCOMPANY.length;i++) {var input = $('#'+requiredFORM_INCOMPANY[i]);if ((input.val() == "") || (input.val() == emptyerror)) { input.addClass("needsfilled");input.val(emptyerror);errornotice.fadeIn(750);} else {input.removeClass("needsfilled");}}
+                        if (!/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email.val())) {	email.addClass("needsfilled");email.val(emailerror);}
+                        if ($(":input").hasClass("needsfilled")) {return false;} else {errornotice.hide();return true;}
+                    });
+                });
+
+            </script>
+
+            <form action="https://www.jmleventos.com.br/envia_form.php" method="post" enctype="multipart/form-data" name="FORM_INCOMPANY" id="FORM_INCOMPANY" >
+
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-campos ">
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <select type="text"  id="produto" name="produto" class="form-control ">
+                            <option value="Simulação de Programa In Company - Gestão">Simulação de Programa In Company - Gestão</option>
+                            <option value="Simulação de Programa In Company - Contratação">Simulação de Programa In Company - Contratação</option>
+                            <option value="Simulação de Programa In Company - Cursos compartilhados">Simulação de Programa In Company - Cursos compartilhados</option>
+                            <option value="Simulação de Programa In Company - Educação Setorizada">Simulação de Programa In Company - Educação Setorizada</option>
+                            <option value="Solicitação de envio de Histórico e Portfolio de Clientes">Solicitação de envio de Histórico e Portfolio de Clientes</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12"><input type="text" placeholder="Órgão, Empresa ou Prefeitura" value="" id="oep" name="oep" class="form-control " onKeyUp="upper(this);"  onBlur="upper(this);"></div>
+                    <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12"><input type="text" placeholder="CNPJ ou CPF sem traços ou pontos" value="" id="cnpj" name="cnpj" class="form-control " onKeyUp="mascaraCPF_CNPJ(this,cpfCnpj);" onBlur="mascaraCPF_CNPJ(this,cpfCnpj);" ></div>
+
+
+                    <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12"><input type="text" placeholder="Nome do Contato" value="" id="contato" name="contato" class="form-control " onKeyUp="upper(this);"  onBlur="upper(this);" ></div>
+                    <div class="form-group col-lg-2 col-md-2 col-sm-6 col-xs-4"><input type="tel" placeholder="DDD" value="" id="DDD" name="DDD" class="form-control " ></div>
+                    <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-8"><input type="tel" placeholder="Telefone" value="" id="telefone" name="telefone" class="form-control "></div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-6 col-xs-12"><input type="text" placeholder="Endereço" value="" id="endereco" name="endereco" class="form-control " onKeyUp="upper(this);"  onBlur="upper(this);" ></div>
+
+                    <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12"><input type="text" placeholder="Bairro" value="" id="bairro" name="bairro" class="form-control " onKeyUp="upper(this);"  onBlur="upper(this);" ></div>
+                    <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-8"><input type="text" placeholder="Cidade" value="" id="cidade" name="cidade" class="form-control " onKeyUp="upper(this);"  onBlur="upper(this);" ></div>
+                    <div class="form-group col-lg-2 col-md-2 col-sm-6 col-xs-4">
+                        <select type="text" placeholder="UF" value="" id="estado" name="estado" class="form-control ">
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AM">AM</option>
+                            <option value="AP">AP</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MG">MG</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="PR">PR</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="RS">RS</option>
+                            <option value="SC">SC</option>
+                            <option value="SE">SE</option>
+                            <option value="SP">SP</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+
+                    <!--///////////////////////////////////////- -->
+                    <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12"><input type="text" placeholder="CEP" value="" id="cep" name="cep" class="form-control "></div>
+                    <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12"><input type="text" placeholder="E-mail" value="" id="email" name="email" class="form-control " onKeyUp="lower(this);"  onBlur="lower(this);" ></div>
+
+                    <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12"><input type="text" placeholder="Responsável" value="" id="responsavel" name="responsavel" class="form-control " onKeyUp="upper(this);"  onBlur="upper(this);" ></div>
+                    <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12"><input type="text" placeholder="Cargo" value="" id="cargo" name="cargo" class="form-control "></div>
+                    <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12"><input type="text" placeholder="Setor" value="" id="setor" name="setor" class="form-control "></div>
+
+                    <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12"><input type="text" placeholder="Estimativa de carga horária (Ex: 36 horas)" value="" id="carga_horaria" name="carga_horaria" class="form-control "onkeyup="upper(this);"  onBlur="upper(this);" ></div>
+                    <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12"><input type="text" placeholder="Número de participantes (Ex: 20)" value="" id="participantes" name="participantes" class="form-control " onKeyUp="upper(this);"  onBlur="upper(this);" ></div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <textarea type="text" placeholder="Qual curso de seu interesse?" value="" id="mensagem" name="mensagem" class="form-control " onKeyUp="upper(this);"  onBlur="upper(this);" ></textarea><p id="error"><strong><i class="fa fa-exclamation-triangle amarelo"></i> Alguns campos s&atilde;o de preenchimento obrigat&oacute;rio. Verifique acima.</strong></p>
+                    </div>
+
+                    <!--///////////////////////////////////////- -->
+                    <div class="form-group col-sm-8 col-lg-8 col-md-8 col-xs-12 linha">
+                    </div>
+
+                    <div class="form-group col-sm-4 col-lg-4 col-md-4 col-xs-12">
+
+                        <button class="btn btn-form" type="submit"><strong>ENVIAR</strong> ></button>
+
+                    </div>
+                    <input name="url" type="hidden" id="url" value="https://incompany.jmlgrupo.com.br/" />
+                    <input name="area" type="hidden" id="area" value="incompany" />
+                    <input name="hotsite" type="hidden" id="hotsite" value="2019" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <link href="https://www.jmleventos.com.br/images/rodape-2020/rodape.css?v=20210225035046" rel="stylesheet">
+
+    <div id="div-rodape-container">
+        <!-- GRUPO JML  -->
+        <div id="div-mulher" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="max-width">
+                <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-grupo-jml-circle.png" class="div-mulher-img-1 img-responsive" />
+            </div>
+        </div>
+
+
+        <!-- div-newsletter-2020  -->
+        <script type="text/javascript">
+            $(window).load(function() {
+                $(".div-newsletter-2020-button").click(function(){
+                    $("#captcha-div").html('<input type="hidden" name="captcha" value="form-captcha">');
+                });
+            });
+        </script>
+        <div id="div-newsletter-2020" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="max-width-newsletter">
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 div-titulo">Newsletter</div>
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 div-form">
+                    <form name="FORM_NEWSLETTER" id="FORM_NEWSLETTER" method="post" action="https://www.jmleventos.com.br/envia_form.php">
+                        <label class="col-lg-3 col-md-3 col-sm-6 col-xs-12 label-9-input"><input type="text" class="form-control input-rodape" placeholder="Seu nome" value="" id="nome" name="nome"></label>
+                        <label class="col-lg-3 col-md-3 col-sm-6 col-xs-12 label-9-input "><input type="text" class="form-control input-rodape" placeholder="Entidade/Empresa" value="" id="oep" name="oep" /></label>
+                        <label class="col-lg-3 col-md-3 col-sm-6 col-xs-12 label-9-input "><input type="text" class="form-control input-rodape" placeholder="seu@e-mail" name="email"></label>
+                        <label class="col-lg-3 col-md-3 col-sm-6 col-xs-12 label-9-button "><button class="div-newsletter-2020-button transition">CADASTRAR</button></label>
+                        <input name="PAGINA_LOGIN" type="hidden"  id="PAGINA_LOGIN" value="" ><input name="ne_cat" type="hidden"  id="ne_cat" value="#21#">
+                        <input name="area" type="hidden"  id="area" value="NEWS2020" >
+                        <input name="origem" type="hidden"  id="origem" value="INCOMPANY" >
+                        <input name="origem_ip" type="hidden" value="191.177.184.152" >
+                        <div id="captcha-div" class="display-none"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- div-rodape-2020 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <div id="div-rodape-2020" class="div-rodape-2020">
+            <div class="div-logos-grupo-jml">
+                <div class="div-logos-grupo-jml-texto">
+                    <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-grupo-jml.png" class="img-responsive rodape-logo-grupo-jml" onClick="document.location.href='http://www.jmleventos.com.br'"/>
+                    <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-grupo-jml-pessoas.png" class="img-responsive rodape-logo-grupo-jml-pessoas" onClick="document.location.href='http://www.jmleventos.com.br'" />
+                    <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-grupo-jml-servicos.png" class="img-responsive rodape-logo-grupo-jml-servicos" onClick="document.location.href='http://www.jmleventos.com.br'" />
+                    <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-grupo-jml-tecnologia.png" class="img-responsive rodape-logo-grupo-jml-tecnologia" onClick="document.location.href='http://www.jmleventos.com.br'" />
+                </div>
+            </div>
+
+            <div class="div-rodape-logos-pequenas">
+                <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-p-jml.png" class="img-responsive logo-p-jml" onClick="document.location.href='http://www.jmleventos.com.br'" />
+                <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-p-corporate-school.png" class="img-responsive logo-p-corporate-school" />
+                <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-p-academy.png" class="img-responsive logo-p-academy" />
+                <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-p-connect.png" class="img-responsive logo-p-connect" />
+            </div>
+
+            <div class="div-rodape-infos-empresa div-rodape-infos-empresa-desktopX">
+                <div class="div-rodape-infos-empresa-texto">Mendes e Lopes Pesquisa, Treinamento e Eventos Ltda.<br />
+                    CNPJ: 07.777.721/0001-51<br />
+                    Rua Mandaguaçu, 534 – Sobre Loja – Bairro <br />
+                    Emiliano Perneta - 83324-430 - Pinhais – PR.
+                </div>
+            </div>
+
+            <div class="div-rodape-central div-rodape-central-desktopX">
+                <div class="div-rodape-central-texto">
+                    <span class="span-1">Central de Relacionamento JML: </span><br />
+                    <span class="span-2">41 3595.9999</span><br />
+                    <span class="span-3">Orientações JML:</span> <span class="span-4"> 41 3595.9997</span><br />
+                    <span class="span-5">WhatsApp:</span> <span class="span-6"> 41 9 9622.6851</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="div-rodape-logos-pequenas-desktop" class="div-rodape-logos-pequenas-desktop div-rodape-logos-pequenas-desktop-desktop">
+            <div class="div-rodape-logos-pequenas-desktop-max-width">
+                <div class="box-1">
+                    <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-p-jml.png" class="img-responsive logo-p-jml" onClick="document.location.href='http://www.jmleventos.com.br'" />
+                    <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-p-corporate-school.png" class="img-responsive logo-p-corporate-school" />
+                    <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-p-academy.png" class="img-responsive logo-p-academy" />
+                    <img src="https://www.jmleventos.com.br/images/rodape-2020/logo-p-connect.png" class="img-responsive logo-p-connect" />
+                </div>
+                <div class="box-2">
+                    <a href="http://www.facebook.com/pages/JML-CONSULTORIA-E-EVENTOS/230280440320041" target="_blank" class="rodape-botao-redes-sociais"><img src="https://www.jmleventos.com.br/images/rodape-2020/icon-facebook.png"/></a>
+                    <a href="https://www.instagram.com/jmlgrupo" target="_blank" class="rodape-botao-redes-sociais"><img src="https://www.jmleventos.com.br/images/rodape-2020/icon-instagram.png"/></a>
+                    <a href="whatsapp://send?phone=5541996226851&text=Contato via do WhatsApp." target="_blank" class="rodape-botao-redes-sociais rodape-whatsapp-cell"><img src="https://www.jmleventos.com.br/images/rodape-2020/icon-whatsapp.png"/></a>
+                    <a href="https://web.whatsapp.com/send?phone=5541996226851&&text=Contato via do WhatsApp." target="_blank" class="rodape-botao-redes-sociais rodape-whatsapp-desktop"><img src="https://www.jmleventos.com.br/images/rodape-2020/icon-whatsapp.png"/></a>
+                    <a href="https://www.youtube.com/user/jmleventos" target="_blank" class="rodape-botao-redes-sociais"><img src="https://www.jmleventos.com.br/images/rodape-2020/icon-youtube.png"/></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.jmleventos.com.br" target="_blank" class="rodape-botao-redes-sociais"><img src="https://www.jmleventos.com.br/images/rodape-2020/icon-linkedin.png"/></a>
+                    <a href="https://open.spotify.com/show/5LhHhVVY0ANUKLq2JS7obO" target="_blank" class="rodape-botao-redes-sociais"><img src="https://www.jmleventos.com.br/images/rodape-2020/icon-spotify.png"/></a>
+                    <a href="https://podcasts.apple.com/us/podcast/jmlcast/id1480998471?uo=4" target="_blank" class="rodape-botao-redes-sociais"><img src="https://www.jmleventos.com.br/images/rodape-2020/icon-podcast-apple.png"/></a>
+                    <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy9kZDU0MjFjL3BvZGNhc3QvcnNz" target="_blank" class="rodape-botao-redes-sociais"><img src="https://www.jmleventos.com.br/images/rodape-2020/icon-podcast-google.png"/></a>
+                    <a href="https://www.jmleventos.com.br" target="_blank" class="rodape-botao-acesse-portal">ACESSE O PORTAL JML</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    </body>
+</html>
